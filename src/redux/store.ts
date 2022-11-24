@@ -1,5 +1,4 @@
 import { combineReducers, compose, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
 import userReducer from "./userDuck";
 import { configureStore } from "@reduxjs/toolkit";
 import logger from "redux-logger";
