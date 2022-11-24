@@ -4,9 +4,11 @@
   "type": "module",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
+    "@types/react-redux": "^7.1.24",
     "@types/react-router-dom": "^5.3.3",
     "axios": "^1.2.0",
     "font-awesome": "^4.7.0",
@@ -18,12 +20,18 @@
     "react-scripts": "3.3.0",
     "redux": "^4.2.0",
     "redux-devtools": "^3.7.0",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.2"
   },
   "devDependencies": {
+    "@redux-devtools/core": "^3.13.1",
+    "@redux-devtools/dock-monitor": "^3.0.1",
+    "@redux-devtools/log-monitor": "^4.0.1",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.9",
     "@types/react-router": "3",
+    "@types/redux": "^3.6.0",
+    "@types/redux-logger": "^3.0.9",
     "@vitejs/plugin-react": "^2.2.0",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
