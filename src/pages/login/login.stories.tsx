@@ -1,15 +1,15 @@
 import { Meta, Story } from "@storybook/react";
 import React from "react";
 
-import Navbar, { Props } from "./navbar.component";
+import LoginPage, { Props } from "./login.page";
 
 export default {
-  title: "coponent/Navbar",
-  component: Navbar,
+  title: "coponent/login",
+  component: LoginPage,
   argTypes: {},
 } as Meta;
 
-const Template: Story<Props> = (args) => <Navbar {...args} />;
+const Template: Story<Props> = (args) => <LoginPage {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {};

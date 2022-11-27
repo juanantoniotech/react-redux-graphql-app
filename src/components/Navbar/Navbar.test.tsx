@@ -1,15 +1,15 @@
-import { render } from '@testing-library/react';
-import React from 'react';
-import Navbar, { Props } from './Navbar';
+import { render } from "@testing-library/react";
+import React from "react";
+import Navbar, { Props } from "./navbar.component";
 
-describe('Navbar', () => {
+describe("Navbar", () => {
   const defaultProps: Props = {};
 
-  it('should render', () => {
+  it("should render", () => {
     const props = { ...defaultProps };
     const { asFragment, queryByText } = render(<Navbar {...props} />);
 
     expect(asFragment()).toMatchSnapshot();
-    expect(queryByText('Navbar')).toBeTruthy();
+    expect(queryByText("Navbar")).toBeTruthy();
   });
 });

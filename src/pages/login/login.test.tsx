@@ -1,15 +1,15 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import HomePage, { Props } from "./home.page";
+import LoginPage, { Props } from "./login.page";
 
-describe("Home", () => {
+describe("login", () => {
   const defaultProps: Props = {};
 
   it("should render", () => {
     const props = { ...defaultProps };
-    const { asFragment, queryByText } = render(<HomePage {...props} />);
+    const { asFragment, queryByText } = render(<LoginPage {...props} />);
 
     expect(asFragment()).toMatchSnapshot();
-    expect(queryByText("Home")).toBeTruthy();
+    expect(queryByText("login")).toBeTruthy();
   });
 });

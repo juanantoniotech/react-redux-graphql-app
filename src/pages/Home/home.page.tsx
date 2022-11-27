@@ -5,7 +5,7 @@ import { AppDispatch } from "../../store/store";
 
 export type Props = {};
 
-const Home: React.FC<Props> = (props) => {
+const HomePage: React.FC<Props> = (props) => {
   const dispatch: AppDispatch = useDispatch();
 
   useEffect(() => {
@@ -15,4 +15,4 @@ const Home: React.FC<Props> = (props) => {
   return <div>Home</div>;
 };
 
-export default Home;
+export default HomePage;

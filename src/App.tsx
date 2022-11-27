@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./components/Navbar";
-import PublicRoutes from "./navigation/PublicRoutes";
+import Navbar from "./components/navbar";
+import MainRoutes from "./router/main.router";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <PublicRoutes />
+      <MainRoutes />
     </div>
   );
 }

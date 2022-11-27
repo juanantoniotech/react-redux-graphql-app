@@ -8,10 +8,13 @@ import "font-awesome/css/font-awesome.css";
 import { store } from "./store/store";
 import { ApolloProvider } from "@apollo/client";
 import apolloClient from "./clients/apollo";
+import AppTheme from "./theme/app.theme";
 
 const WithRouter = () => (
   <BrowserRouter>
-    <App />
+    <AppTheme>
+      <App />
+    </AppTheme>
   </BrowserRouter>
 );
 

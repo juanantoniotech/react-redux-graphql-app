@@ -1,16 +1,17 @@
 import React from "react";
 import styles from "./favs.module.css";
-import Card from "../Card/Card";
+import Card from "../card/card.component";
+import { Typography, Container } from "@mui/material";
 
 export default function FavPage({ characters = [0] }) {
   function renderCharacter(char, i) {
     return <Card key={i} />;
   }
   return (
-    <div className={styles.container}>
-      <h2>Favoritos</h2>
+    <Container sx={{ mt: "100px" }}>
+      <Typography component={"h2"}>Personajes</Typography>
       {characters.map(renderCharacter)}
       {!characters.length && <h3>No hay personajes agregados</h3>}
-    </div>
+    </Container>
   );
 }

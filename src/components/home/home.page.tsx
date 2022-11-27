@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Card from "../Card/Card";
+import Card from "../card/card.component";
 import styles from "./home.module.css";
 import axios from "axios";
+import { Container } from "@mui/material";
+
+import { Typography } from "@mui/material";
 
 let URL = "https://rickandmortyapi.com/api";
 
@@ -32,9 +35,9 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.container}>
-      <h2>Personajes de Rick y Morty</h2>
+    <Container sx={{ mt: 3 }}>
+      <Typography>Personajes</Typography>
       <div>{renderCharacter()}</div>
-    </div>
+    </Container>
   );
 }
