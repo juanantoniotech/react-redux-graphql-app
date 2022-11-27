@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import {
   Box,
   Menu,
   MenuItem,
   Container,
   AppBar,
-  Grid,
   IconButton,
   Toolbar,
   Typography,
@@ -92,6 +91,13 @@ const Navbar: React.FC<Props> = (props) => {
               sx={{ my: 2, color: "white", display: "block", fontWeight: 700 }}
             >
               Inicio
+            </Button>
+            <Button
+              href="/characters"
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: "white", display: "block", fontWeight: 700 }}
+            >
+              Personajes
             </Button>
             <Button
               href="/favs"

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface CharsState {
+export interface CharsState {
   loading: boolean;
   count: number;
   previous: string | null;
