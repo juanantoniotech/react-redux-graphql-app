@@ -4,8 +4,8 @@ import { createSlice } from "@reduxjs/toolkit";
 export interface CharsState {
   loading: boolean;
   count: number;
-  previous: string | null;
-  next: string | null;
+  previousPage: string | null;
+  nextPage: string | null;
   results: any[];
   error: string | null;
 }
@@ -13,8 +13,8 @@ export interface CharsState {
 const initialState: CharsState = {
   loading: false,
   count: 0,
-  previous: null,
-  next: null,
+  previousPage: null,
+  nextPage: null,
   results: [],
   error: null,
 };
@@ -29,8 +29,8 @@ export const charsSlice = createSlice({
     success: (state: CharsState, action: PayloadAction<any>) => {
       state.loading = false;
       state.count = action.payload.count;
-      state.previous = action.payload.previous;
-      state.next = action.payload.next;
+      state.previousPage = action.payload.previous;
+      state.nextPage = action.payload.next;
       state.results = action.payload.results;
     },
     error: (state: CharsState, action: PayloadAction<any>) => {

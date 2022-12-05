@@ -1,5 +1,6 @@
-import { ThunkAction } from "redux-thunk";
-import { configureStore, Action } from "@reduxjs/toolkit";
+import type { ThunkAction } from "redux-thunk";
+import type { Action } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 import { userSlice } from "./slices/user";
 import { charsSlice } from "./slices/chars";

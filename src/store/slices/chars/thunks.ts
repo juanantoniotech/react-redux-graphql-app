@@ -3,10 +3,13 @@ import type { Dispatch } from "redux";
 import { fetching, success, error } from "./slice";
 
 export const getCharacters =
-  () => async (dispatch: Dispatch, getState: any) => {
+  (nextPage = null) =>
+  async (dispatch: Dispatch, getState: any) => {
     dispatch(fetching());
     try {
-      const response = await axiosClient.get("/people");
+      const url = nextPage ? nextPage : "/people";
+
+      const response = await axiosClient.get(url);
       dispatch(success(response.data));
     } catch (err) {
       dispatch(error(err));
