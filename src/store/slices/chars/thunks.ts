@@ -1,6 +1,6 @@
 import axiosClient from "../../../clients/axios";
 import { Dispatch } from "redux";
-import { fetching, success } from "./slice";
+import { fetching, success, error } from "./slice";
 
 export const getCharacters =
   () => async (dispatch: Dispatch, getState: any) => {
@@ -9,5 +9,7 @@ export const getCharacters =
     try {
       const response = await axiosClient.get("/people");
       dispatch(success(response.data));
-    } catch (error) {}
+    } catch (err) {
+      dispatch(error(err))
+    }
   };

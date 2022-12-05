@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import Navbar from "./components/navbar";
-import MainRoutes from "./router/main.router";
+import Navbar from "@components/navbar";
+import RoutesManager from "@setup/routes-manager";
 
 function App() {
   return (
     <div>
       <Navbar />
-      <MainRoutes />
+      <RoutesManager />
     </div>
   );
 }

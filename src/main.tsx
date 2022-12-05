@@ -10,11 +10,14 @@ import { ApolloProvider } from "@apollo/client";
 import apolloClient from "./clients/apollo";
 import AppTheme from "./theme/app.theme";
 
+const WithTheme = () => (
+  <AppTheme>
+    <App />
+  </AppTheme>
+);
 const WithRouter = () => (
   <BrowserRouter>
-    <AppTheme>
-      <App />
-    </AppTheme>
+    <WithTheme />
   </BrowserRouter>
 );
 

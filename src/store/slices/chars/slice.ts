@@ -32,8 +32,12 @@ export const charsSlice = createSlice({
       state.next = action.payload.next;
       state.results = action.payload.results;
     },
+    error: (state: CharsState, action: PayloadAction<any>)=> {
+      state.loading = false;
+      state.error = action.payload;
+    }
   },
 });
 
 // Los actions creators se generan por cada función reductora
-export const { fetching, success } = charsSlice.actions;
+export const { fetching, success, error } = charsSlice.actions;
