@@ -1,4 +1,5 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 
 export interface CharsState {
   loading: boolean;
@@ -32,10 +33,10 @@ export const charsSlice = createSlice({
       state.next = action.payload.next;
       state.results = action.payload.results;
     },
-    error: (state: CharsState, action: PayloadAction<any>)=> {
+    error: (state: CharsState, action: PayloadAction<any>) => {
       state.loading = false;
       state.error = action.payload;
-    }
+    },
   },
 });
 
